@@ -1,5 +1,5 @@
 # remarkable-extlink
-(Remarkable)[https://github.com/jonschlinkert/remarkable] plugin adds `target` and `rel` attributes for external links.
+[Remarkable](https://github.com/jonschlinkert/remarkable) plugin adds `target` and `rel` attributes for external links.
 
 ## Installation
 `npm install --save-dev remarkable-extlink`
