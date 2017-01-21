@@ -1,0 +1,29 @@
+{
+  "name": "remarkable-extlink",
+  "version": "1.0.0",
+  "description": "Adds target and rel attributes to external links.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/remarkable-extlink.git"
+  },
+  "keywords": [
+    "remarkable",
+    "plugin",
+    "extlink",
+    "external",
+    "links"
+  ],
+  "author": "Vitaliy Bobrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/remarkable-extlink/issues"
+  },
+  "homepage": "https://github.com/vitaliy-bobrov/remarkable-extlink#readme",
+  "dependencies": {
+    "remarkable": "^1.7.1"
+  }
+}
