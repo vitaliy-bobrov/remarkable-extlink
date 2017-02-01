@@ -1,4 +1,7 @@
 # remarkable-extlink
+[![npm version](https://badge.fury.io/js/remarkable-extlink.svg)](https://badge.fury.io/js/remarkable-extlink)
+[![npm](https://img.shields.io/npm/dt/remarkable-extlink.svg)](https://github.com/vitaliy-bobrov/remarkable-extlink)
+
 [Remarkable](https://github.com/jonschlinkert/remarkable) plugin adds `target` and `rel` attributes for external links.
 
 ## Installation
