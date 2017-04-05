@@ -1,4 +1,4 @@
-const url = require('url');
+import url from 'url';
 
 const DEFAUL_OPTIONS = {
   target: '_blank',
@@ -23,13 +23,13 @@ const remarkableExtLink = (md, options) => {
   // Save original method to invoke.
   const originalRender = md.renderer.rules.link_open;
 
-  md.renderer.rules.link_open = function(tokens, idx, options, env) {
-    var result;
+  md.renderer.rules.link_open = function() {
+    let result;
 
     // Invoke original method first.
     result = originalRender.apply(null, arguments);
 
-    regexp = /href="([^"]*)"/;
+    let regexp = /href="([^"]*)"/;
 
     let href = url.parse(regexp.exec(result)[1]);
 
@@ -41,4 +41,4 @@ const remarkableExtLink = (md, options) => {
   };
 };
 
-module.exports = remarkableExtLink;
+export default remarkableExtLink;
