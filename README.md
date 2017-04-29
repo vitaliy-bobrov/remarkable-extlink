@@ -1,11 +1,15 @@
-# remarkable-extlink
+# remarkable-extlink 🔗
 [![npm version](https://badge.fury.io/js/remarkable-extlink.svg)](https://badge.fury.io/js/remarkable-extlink)
 [![npm](https://img.shields.io/npm/dt/remarkable-extlink.svg)](https://github.com/vitaliy-bobrov/remarkable-extlink)
 
 [Remarkable](https://github.com/jonschlinkert/remarkable) plugin adds `target` and `rel` attributes for external links.
 
 ## Installation
-`npm install --save-dev remarkable-extlink`
+- npm:
+  `npm install --save-dev remarkable-extlink`
+
+- yarn:
+  `yarn add -D remarkable-extlink`
 
 ## Usage
 ```js
