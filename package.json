@@ -1,6 +1,6 @@
 {
   "name": "remarkable-extlink",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adds target and rel attributes to external links.",
   "main": "index.js",
   "scripts": {
