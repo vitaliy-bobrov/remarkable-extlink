@@ -1,4 +1,4 @@
-const url = reqiore('url');
+const url = require('url');
 
 const DEFAUL_OPTIONS = {
   target: '_blank',
