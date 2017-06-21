@@ -1,4 +1,4 @@
-import url from 'url';
+const url = reqiore('url');
 
 const DEFAUL_OPTIONS = {
   target: '_blank',
@@ -41,4 +41,4 @@ const remarkableExtLink = (md, options) => {
   };
 };
 
-export default remarkableExtLink;
+module.exports = remarkableExtLink;
