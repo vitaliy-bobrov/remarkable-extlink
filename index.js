@@ -1,6 +1,6 @@
-const url = require('url');
+var url = require('url');
 
-const DEFAUL_OPTIONS = {
+var DEFAULT_OPTIONS = {
   target: '_blank',
   rel: 'nofollow noreferrer noopener'
 };
@@ -11,30 +11,30 @@ const DEFAUL_OPTIONS = {
  * @param href {Object} Parsed url object.
  * @return {Boolean}
  */
-const isInternal = (host, href) => {
+var isInternal = function (host, href) {
   return href.host === host || (!href.protocol && !href.host && href.pathname);
 };
 
-const remarkableExtLink = (md, options) => {
-  const config = Object.assign({}, DEFAUL_OPTIONS, options);
+var remarkableExtLink = function (md, options) {
+  var config = Object.assign({}, DEFAULT_OPTIONS, options);
 
   // Parse and normalize hostname.
   config.host = url.parse(config.host).host;
   // Save original method to invoke.
-  const originalRender = md.renderer.rules.link_open;
+  var originalRender = md.renderer.rules.link_open;
 
   md.renderer.rules.link_open = function() {
-    let result;
+    var result;
 
     // Invoke original method first.
     result = originalRender.apply(null, arguments);
 
-    let regexp = /href="([^"]*)"/;
+    var regexp = /href="([^"]*)"/;
 
-    let href = url.parse(regexp.exec(result)[1]);
+    var href = url.parse(regexp.exec(result)[1]);
 
     if (!isInternal(config.host, href)) {
-      result = result.replace('>', ` target="${config.target}" rel="${config.rel}">`);
+      result = result.replace('>', ' target="' + config.target + '" rel="' + config.rel + '">');
     }
 
     return result;
