@@ -12,7 +12,7 @@ var DEFAULT_OPTIONS = {
  * @return {Boolean}
  */
 var isInternal = function (host, href) {
-  return href.host === host || (!href.protocol && !href.host && href.pathname);
+  return href.host === host || (!href.protocol && !href.host && (href.pathname || href.hash));
 };
 
 var remarkableExtLink = function (md, options) {
